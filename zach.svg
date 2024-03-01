@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="100vh">
+<svg xmlns="http://www.w3.org/2000/svg" width="80vw" height="80vh">
     <style><![CDATA[svg text{stroke:none}]]></style>
-    <text x="5" y="25" font-family="Helvetica">ZR</text>
+    <text x="2" y="20" font-family="Helvetica">ZR</text>
 </svg>

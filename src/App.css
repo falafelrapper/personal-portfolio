@@ -1,7 +1,39 @@
+@font-face {
+    font-family: "Geist";
+    src: url('./components/fonts/Geist/Geist-Regular.otf');
+    src: url('./components/fonts/Geist/Geist-Regular.otf') format('opentype'),
+        url('./components/fonts/Geist/Geist-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url('./components/fonts/Geist/Geist-Bold.otf');
+    src: url('./components/fonts/Geist/Geist-Bold.otf') format('opentype'),
+        url('./components/fonts/Geist/Geist-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url('./components/fonts/Geist/Geist-Thin.otf');
+    src: url('./components/fonts/Geist/Geist-Thin.otf') format('opentype'),
+        url('./components/fonts/Geist/Geist-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Geist Mono";
+    src: url('./components/fonts/Geist.Mono/GeistMono-Regular.otf');
+    src: url('./components/fonts/Geist.Mono/GeistMono-Regular.otf') format('opentype'),
+        url('./components/fonts/Geist.Mono/GeistMono-Regular.woff2') format('woff2');
+}
+
 :root {
     --kyogre: #194E8A;
     --deepsea: #4b8eda;
-    --miku: #4fcec5;
+    --miku: #4adad0;
     --latte: #d6c898;
     --espresso: #685927;
     --latias: #FF6B6B;
@@ -17,14 +49,14 @@
 body {
     height: 100vh;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Geist";
 }
 
 a {
     text-decoration: none;
     color: black;
     transition: ease-in-out 0.2s;
-    font-weight: bold;
+    font-weight: 100;
 }
 
 a:hover {
@@ -36,6 +68,7 @@ a:hover {
     justify-content: center;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100vw;
     animation: fadeIn 1s;
 }
@@ -62,7 +95,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: Helvetica;
+    font-family: "Geist";
+    font-weight: bold;
     margin: 0;
     padding: 0;
     animation: fadeIn 2s;
@@ -75,7 +109,7 @@ a:hover {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-family: Helvetica;
+    font-family: "Geist";
     height: 100vh;
     margin: 0 15%;
     animation: fadeIn 1.5s;
@@ -87,7 +121,6 @@ a:hover {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-family: Helvetica;
     height: 100vh;
     margin: 0 5%;
     animation: fadeIn 1.5s;
@@ -112,30 +145,31 @@ a:hover {
 }
 
 .project-card {
-    flex: 1 0 50%;
+    flex: 1 0 25%;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+    font-family: "Geist";
     border: solid 3px;
     border-radius: 8px;
-    margin: 4.8%;
-    max-width: 40%;
+    margin: 4.8vw;
+    max-width: 41vw;
     transition: ease-in-out .3s;
     position: relative;
 }
 
-.project-card img{
+.project-card img {
     width: 100%;
     height: 100%;
     transition: ease-in-out .3s;
 }
 
-.project-card:hover img{
+.project-card:hover img {
     filter: blur(7px);
     opacity: .4;
 }
 
-.project-links{
+.project-links {
     padding-top: 15vh;
     position: absolute;
     top: 0;
@@ -147,22 +181,22 @@ a:hover {
     transition: ease-in-out 0.4s;
 }
 
-.project-card:hover .project-links{
+.project-card:hover .project-links {
     filter: blur(0px);
     opacity: 1;
 }
 
-.project-card:hover .project-links #github-repo{
+.project-card:hover .project-links #github-repo {
     filter: blur(0px);
     opacity: 1;
 }
 
-#github-repo{
+#github-repo {
     width: 30px;
     height: 30px;
 }
 
-.project-card:hover .project-links #github-repo:hover{
+.project-card:hover .project-links #github-repo:hover {
     opacity: 0.5;
 }
 
@@ -192,11 +226,11 @@ a:hover {
 .contact-form label,
 .contact-form input,
 .contact-form textarea,
-.contact-form button{
+.contact-form button {
     margin: 5px;
 }
 
-.contact-form textarea{
+.contact-form textarea {
     width: 15vw;
     height: 20vh;
 }
@@ -242,7 +276,9 @@ a:hover {
 #stackoverflow {
     color: black;
     transition: ease-in-out .2s;
-    margin: 5px;
+    margin: 0 .1vw;
+    height: 3vh;
+    width: 3vw;
 }
 
 #linkedin:hover,
@@ -259,7 +295,7 @@ a:hover {
 
 .error {
     color: red;
-  }
+}
 
 @keyframes fadeIn {
     0% {
@@ -268,5 +304,82 @@ a:hover {
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        display: flex;
+        max-width: 100vw;
+        flex-wrap: wrap;
+        margin: auto;
+        animation: fadeIn 1.5s;
+        padding-top: 5vh;
+    }
+
+    .project-card {
+        flex: 1 0 90%;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        font-family: "Geist";
+        border: solid 3px;
+        border-radius: 8px;
+        margin: 4.8%;
+        max-width: 90%;
+        transition: ease-in-out .3s;
+        position: relative;
+    }
+
+    .project-links {
+        padding-top: 10vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        font-size: 4vw;
+        width: 100%;
+        opacity: 0;
+        transition: ease-in-out 0.4s;
+    }
+
+    .navbar {
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 5%;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        margin: 5px auto 0;
+        border: solid 2px;
+        border-radius: 8px;
+        font-size: 3vw;
+        width: 90%;
+        animation: fadeIn 1s;
+        background-color: white;
+    }
+
+    #resume {
+        height: 80vh;
+        width: 95vw;
+        border-radius: 10px;
+    }
+
+    #zach-pic {
+        width: 40%;
+    }
+
+    #linkedin,
+    #email,
+    #phone,
+    #github,
+    #stackoverflow {
+        color: black;
+        transition: ease-in-out .2s;
+        margin: 0 4vw;
+        height: 5vh;
+        width: 5vw;
     }
 }
