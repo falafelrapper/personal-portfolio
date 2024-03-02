@@ -85,7 +85,7 @@ a:hover {
     margin: 5px auto 0;
     border: solid 2px;
     border-radius: 8px;
-    font-size: .9vw;
+    font-size: 1vw;
     width: 50%;
     animation: fadeIn 1s;
     background-color: white;
@@ -116,22 +116,56 @@ a:hover {
     animation: fadeIn 1.5s;
 }
 
-.resume {
+.about-me p {
+    text-align: justify;
+}
+
+.resume-window{
+    padding-top: 5vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     height: 100vh;
-    margin: 0 5%;
+    margin: 0 10%;
     animation: fadeIn 1.5s;
 }
 
-#resume {
+.resume-pic {
+    padding-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: block;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    animation: fadeIn 1.5s;
+}
+
+.resume-dl{
+    padding-bottom: 10%;
+}
+
+.resume-dl a{
+    display: flex;
+    justify-content: center;
+}
+
+
+.resume-pic img {
+    flex-grow: 1 0 50%;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+/* #resume {
     height: 80vh;
     width: 100vh;
     border-radius: 10px;
-}
+} */
 
 .nav-link {
     margin: 10px;
@@ -174,13 +208,14 @@ a:hover {
 }
 
 .project-links {
-    padding-top: 15vh;
+    padding-top: 8vw;
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
     bottom: 0;
     text-align: center;
+    font-size: 1vw;
     width: 100%;
     opacity: 0;
     transition: ease-in-out 0.4s;
@@ -285,7 +320,7 @@ a:hover {
     width: 3vw;
 }
 
-#phone{
+#phone {
     color: black;
     transition: ease-in-out .2s;
     margin: 0 .1vw;
@@ -319,7 +354,7 @@ a:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .portfolio-container {
         display: flex;
         max-width: 100vw;
@@ -359,7 +394,7 @@ a:hover {
 
     .navbar {
         position: fixed;
-        z-index: 2;
+        z-index: 3;
         top: 0;
         left: 5%;
         display: flex;
