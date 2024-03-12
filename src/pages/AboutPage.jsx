@@ -11,6 +11,19 @@ export default function AboutPage() {
     preloadFiles(combinedFiles);
   }, []);
 
+  function preloadFiles(files) {
+    files.forEach((file) => {
+      if (file.endsWith(".pdf")) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", file, true);
+        xhr.send();
+      } else {
+        const img = new Image();
+        img.src = file;
+      }
+    });
+  }
+
   return (
     <div className="about-me">
       <img id='zach-pic' src="/content/about-me.png" alt="Zachary Roy" />
@@ -44,15 +57,3 @@ export default function AboutPage() {
   );
 }
 
-function preloadFiles(files) {
-  files.forEach((file) => {
-    if (file.endsWith(".pdf")) {
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", file, true);
-      xhr.send();
-    } else {
-      const img = new Image();
-      img.src = file;
-    }
-  });
-}

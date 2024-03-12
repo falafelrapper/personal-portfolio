@@ -11,6 +11,19 @@ export default function ContactPage() {
     preloadFiles(combinedFiles);
   }, []);
 
+  function preloadFiles(files) {
+    files.forEach((file) => {
+      if (file.endsWith(".pdf")) {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", file, true);
+        xhr.send();
+      } else {
+        const img = new Image();
+        img.src = file;
+      }
+    });
+  }
+
   return (
     <>
       <div className="contact-window">
@@ -38,17 +51,4 @@ export default function ContactPage() {
       </div>
     </>
   );
-}
-
-function preloadFiles(files) {
-  files.forEach((file) => {
-    if (file.endsWith(".pdf")) {
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", file, true);
-      xhr.send();
-    } else {
-      const img = new Image();
-      img.src = file;
-    }
-  });
 }
