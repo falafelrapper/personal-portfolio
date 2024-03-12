@@ -15,6 +15,11 @@ export default function PortfolioPage() {
     <>
       <div className="portfolio-container">
         <Project
+          projectTitle='Mad Libs Generator'
+          projectLink='https://team-m-s-project-3.onrender.com/'
+          projectImg='/content/portfolio/mad-libs.png'
+          projectGit='https://github.com/RCLobster/team-M-s-project-3' />
+        <Project
           projectTitle='Breaking Bread'
           projectLink='https://agile-cove-66310-81bc545fcfa7.herokuapp.com/'
           projectImg='/content/portfolio/breaking-bread.jpg'

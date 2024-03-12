@@ -34,16 +34,15 @@
     --kyogre: #194E8A;
     --deepsea: #4b8eda;
     --miku: #4adad0;
-    --latte: #d6c898;
-    --espresso: #685927;
-    --latias: #FF6B6B;
     --black: #000000;
     --smoke: #807f7f80;
+    --white: #ffffff;
     --deepsmoke: #807f7fbb;
     --lugia: #dddddd;
     --jade: #640377;
     --text: #ec98e1;
     --emerald: #19bb98;
+    --clear: #00000000;
 }
 
 body {
@@ -67,7 +66,10 @@ a:hover {
     display: flex;
     justify-content: center;
     position: fixed;
-    z-index: 0;
+    background: linear-gradient(var(--clear) 10%, var(--white) 20%);
+    height: 3.5vh;
+    padding-top: 1vh;
+    z-index: 2;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -177,6 +179,7 @@ a:hover {
     flex-wrap: wrap;
     margin: auto;
     animation: fadeIn 1.5s;
+    justify-content: center;
 }
 
 .project-card {
@@ -184,6 +187,7 @@ a:hover {
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
+    justify-content: center;
     font-family: "Geist";
     border: solid 3px;
     border-radius: 8px;
@@ -193,11 +197,13 @@ a:hover {
     position: relative;
     z-index: 2;
     background-color: white;
+    overflow: hidden;
 }
 
 .project-card img {
     width: 100%;
     height: 100%;
+    border-radius: 5px;
     transition: ease-in-out .3s;
     z-index: 2;
 }
@@ -443,7 +449,7 @@ a:hover {
         display: flex;
         justify-content: center;
         position: fixed;
-        background-color: white;
+        background: linear-gradient(var(--clear) 10%, var(--white) 20%);
         z-index: 2;
         bottom: 0;
         left: 0;
