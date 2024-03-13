@@ -46,7 +46,6 @@
 }
 
 body {
-    height: 100vh;
     margin: 0;
     font-family: "Geist";
 }
@@ -103,7 +102,7 @@ a:hover {
     margin: 0;
     padding: 0;
     animation: fadeIn 2s;
-    height: 100vh
+    height: 100vh;
 }
 
 .about-me {
@@ -353,6 +352,19 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    .name {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Geist";
+        font-weight: bold;
+        margin-top: 42vh;
+        padding: 0;
+        animation: fadeIn 2s;
+        height: fit-content;
+    }
+
     .portfolio-container {
         display: flex;
         max-width: 100vw;
@@ -438,7 +450,7 @@ a:hover {
 
     .resume-dl{
         justify-content: center;
-        padding-bottom: 5vh;
+        padding-bottom: 10vh;
     }
 
     /* .resume-dl a{
@@ -463,6 +475,15 @@ a:hover {
     .resume-pic img {
         flex-grow: 1 0 50%;
         width: 125%;
+        flex-direction: column;
+    }
+
+    .contact-window {
+        height: fit-content;
+        margin-top: 30vh;
+        display: flex;
+        justify-content: center;
+        animation: fadeIn 1.5s;
         flex-direction: column;
     }
 
