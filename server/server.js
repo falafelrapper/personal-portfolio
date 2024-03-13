@@ -1,35 +1,17 @@
 // Standard server with user authentication
 
 const express = require('express');
-const { ApolloServer } = require('@apollo/server');
-const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
-const { authMiddleware } = require('./utils/auth');
 
-const { typeDefs, resolvers } = require('./schemas');
-const db = require('./config/connection');
 require('dotenv').config()
 
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-});
-
-
 const startApolloServer = async () => {
-    await server.start();
 
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
-
-
-    app.use('/graphql', expressMiddleware(server, {
-        context: authMiddleware
-      }));
-    
 
 
     if (process.env.NODE_ENV === 'production') {
@@ -40,11 +22,8 @@ const startApolloServer = async () => {
         });
     }
 
-    db.once('open', () => {
-        app.listen(PORT, () => {
-            console.log(`API server running on port ${PORT}!`);
-            console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
-        });
+    app.listen(PORT, () => {
+        console.log(`API server running on port ${PORT}!`);
     });
 };
 

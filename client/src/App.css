@@ -240,7 +240,7 @@ a:hover {
 }
 
 .contact-window {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     animation: fadeIn 1.5s;
