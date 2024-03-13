@@ -113,7 +113,8 @@ a:hover {
     flex-direction: column;
     text-align: center;
     font-family: "Geist";
-    height: 100vh;
+    padding-top: 15vh;
+    height: fit-content;
     margin: 0 15%;
     animation: fadeIn 1.5s;
 }
