@@ -4,5 +4,5 @@ export const imageUrls = [
     '/content/portfolio/tech-blog.png',
     '/content/portfolio/code-quiz.png',
     '/content/portfolio/movie-recommender.png',
-    '/content/portfolio/mad-lib.png'
+    '/content/portfolio/mad-libs.png'
 ];

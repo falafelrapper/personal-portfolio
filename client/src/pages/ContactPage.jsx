@@ -5,24 +5,17 @@ import { imageUrls } from "../components/js/pictureConstants";
 
 export default function ContactPage() {
   
-  useEffect(() => {
-    const pdfFile = "../content/Resume.pdf";
-    const combinedFiles = [...imageUrls, pdfFile];
-    preloadFiles(combinedFiles);
-  }, []);
-
   function preloadFiles(files) {
     files.forEach((file) => {
-      if (file.endsWith(".pdf")) {
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", file, true);
-        xhr.send();
-      } else {
-        const img = new Image();
-        img.src = file;
-      }
+      const img = new Image();
+      img.src = file;
     });
   }
+
+  useEffect(() => {
+    preloadFiles(imageUrls);
+  }, []);
+
 
   return (
     <>
