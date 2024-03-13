@@ -30,7 +30,7 @@ export default function ResumePage() {
         <img src="/content/Resume-1.jpg" alt="" />
         <img src="/content/Resume-2.jpg" alt="" />
         <div className='resume-dl'>
-          <a href="/content/Resume.pdf" download="Zachary-Roy-Resume.pdf"><svg fill="#000000" height="3vh" width="3vw" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          <a id='resume-dl' href="/content/Resume.pdf" download="Zachary-Roy-Resume.pdf"><svg fill="#000000" height="5vh" width="5vw" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 29.978 29.978" xml:space="preserve">
             <path d="M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012
 		v-8.861H25.462z" fill="currentColor" />
