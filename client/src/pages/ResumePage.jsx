@@ -53,7 +53,7 @@ export default function ResumePage() {
           </div>
         </div>
       ) : (
-        <div></div>
+        <div className='resume-window'></div>
       )}
 
     </>

@@ -129,7 +129,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    min-height: 105vh;
     margin: 0 10%;
     animation: fadeIn 1.5s;
 }
@@ -168,6 +168,7 @@ a:hover {
 
 .portfolio-container {
     display: flex;
+    min-height: 105vh;
     max-width: 100vw;
     flex-wrap: wrap;
     margin: auto;
