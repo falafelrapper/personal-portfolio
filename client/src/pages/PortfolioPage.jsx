@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
 import Project from '../components/Project';
 
 export default function PortfolioPage() {
@@ -65,7 +64,7 @@ export default function PortfolioPage() {
         </div>
 
       ) : (
-        <div className='portfolio-container'></div>
+        <div className='page-start'></div>
       )}
     </>
   );

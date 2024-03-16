@@ -54,7 +54,7 @@ export default function ResumePage() {
           </div>
         </div>
       ) : (
-        <div className='resume-window'></div>
+        <div className='page-start'></div>
       )}
 
     </>
