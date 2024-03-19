@@ -62,7 +62,7 @@ export default function AboutPage() {
         <p>All references are available upon request.</p>
       </div>
     ) : (
-      <div></div>
+      <div className='page-start'></div>
     )}
     </>
   );
