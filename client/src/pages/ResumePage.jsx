@@ -5,7 +5,9 @@ export default function ResumePage() {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const imageUrls = [
     "/content/Resume-1.jpg",
-    "/content/Resume-2.jpg"
+    "/content/Resume-2.jpg",
+    "/content/Resume-1-Dark.jpg",
+    "/content/Resume-2-Dark.jpg"
   ];
 
   function preloadFiles(files) {
@@ -33,8 +35,10 @@ export default function ResumePage() {
       {imagesLoaded ? (
         <div className='resume-window'>
           <div className="resume-pic">
-            <img src="/content/Resume-1.jpg" alt="" />
-            <img src="/content/Resume-2.jpg" alt="" />
+            <img className="light-resume" src="/content/Resume-1.jpg" alt="" />
+            <img className="light-resume" src="/content/Resume-2.jpg" alt="" />
+            <img className="dark-resume" src="/content/Resume-1-Dark.jpg" alt="" />
+            <img className="dark-resume" src="/content/Resume-2-Dark.jpg" alt="" />
             <div className='resume-dl'>
               <a href="/content/Resume.pdf" download="Zachary-Roy-Resume.pdf">
                 <svg id='resume-dl' fill="#000000" height="5vh" width="5vw" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"

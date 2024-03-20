@@ -161,9 +161,12 @@ header {
     flex-direction: block;
     align-items: center;
     text-align: center;
-    height: 100vh;
     width: 100%;
     animation: fadeIn 1.5s;
+}
+
+.dark-resume{
+    display: none;
 }
 
 .resume-dl {
@@ -461,6 +464,15 @@ header {
         animation: fadeIn 1s;
     }
 
+    .light-resume{
+        display: none;
+        z-index: -1;
+    }
+
+    .dark-resume{
+        display: inherit;
+    }
+
     #linkedin,
     #email,
     #github,
@@ -624,7 +636,6 @@ header {
     #github,
     #github-repo,
     #stackoverflow {
-        color: black;
         transition: ease-in-out .2s;
         margin: 0 10vw;
         height: 2.5rem;
@@ -645,13 +656,11 @@ header {
 
     .resume-pic {
         padding-top: 1vh;
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         flex-direction: block;
         align-items: center;
         text-align: center;
-        height: 100vh;
         animation: fadeIn 1.5s;
     }
 
