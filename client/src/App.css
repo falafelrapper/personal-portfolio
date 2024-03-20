@@ -593,7 +593,6 @@ header {
         font-size: 1rem;
         width: 90vw;
         animation: fadeIn 1s;
-        background-color: white;
     }
 
     .nav-link {
@@ -683,13 +682,21 @@ header {
         display: flex;
         justify-content: center;
         position: fixed;
-        background: linear-gradient(var(--clear) 10%, var(--white) 20%);
         z-index: 2;
         bottom: 0;
         left: 0;
         width: 100vw;
         height: fit-content;
         animation: fadeIn 1s;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: fixed;
+        z-index: 3;
+        top: 0;
     }
 
     #resume-dl {
