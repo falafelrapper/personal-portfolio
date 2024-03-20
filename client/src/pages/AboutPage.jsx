@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 export default function AboutPage() {
 
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  const imageUrls = [
+  const imageUrl = [
     "/content/about-me.png"
   ];
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
   }
 
   useEffect(() => {
-    preloadFiles(imageUrls);
+    preloadFiles(imageUrl);
   }, []);
 
 

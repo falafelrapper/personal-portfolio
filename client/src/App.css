@@ -595,7 +595,6 @@ header {
         position: fixed;
         z-index: 3;
         top: 0;
-        left: 5%;
         display: flex;
         justify-content: space-around;
         text-align: center;
