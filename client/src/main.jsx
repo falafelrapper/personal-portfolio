@@ -11,6 +11,7 @@ import ResumePage from './pages/ResumePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import PortfolioPage from './pages/PortfolioPage';
+import MadLibs from './pages/projects/MadLibs';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: 'portfolio',
         element: <PortfolioPage />,
+      },
+      {
+        path: 'portfolio/madlibs',
+        element: <MadLibs />,
       }
     ],
   },

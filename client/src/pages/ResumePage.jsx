@@ -31,7 +31,7 @@ export default function ResumePage() {
   return (
     <>
       {imagesLoaded ? (
-        <div className='resume-window'>
+        <main className='resume-window'>
           <div className="resume-pic">
             <img className="light-resume" src="/content/Resume-Light.jpg" alt="" />
             <img className="dark-resume" src="/content/Resume-Dark.jpg" alt="" />
@@ -52,7 +52,7 @@ export default function ResumePage() {
 
             </div>
           </div>
-        </div>
+        </main>
       ) : (
         <div className='page-start'></div>
       )}

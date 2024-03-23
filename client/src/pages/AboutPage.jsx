@@ -32,7 +32,7 @@ export default function AboutPage() {
     <>
     {imagesLoaded ? (
       
-      <div className="about-me">
+      <main className="about-me">
         <img id='zach-pic' src="/content/about-me.png" alt="Zachary Roy" />
         <h2>About Me</h2>
         <p>
@@ -60,7 +60,7 @@ export default function AboutPage() {
           meet user needs but also exceed expectations, making a mark on the digital landscape.</p>
   
         <p>All references are available upon request.</p>
-      </div>
+      </main>
     ) : (
       <div className='page-start-mobile'></div>
     )}

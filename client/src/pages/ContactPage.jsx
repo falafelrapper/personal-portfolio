@@ -4,7 +4,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="contact-window">
+      <main className="contact-window">
         <div className="contact-card">
           <h2>Contact Me</h2>
           <Link to='https://www.linkedin.com/in/zachary-maxwell-roy/' target="_blank" rel="noopener noreferrer">
@@ -20,7 +20,7 @@ export default function ContactPage() {
           </Link>
           <p>zacharymaxwellroy@gmail.com</p>
         </div>
-      </div>
+      </main>
     </>
   );
 }

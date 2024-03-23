@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
-export default function Project({ projectTitle, projectLink, projectDesc, projectImg, projectGit, imgAlt }) {
+export default function ProjectPage({ projectTitle, projectLink, projectDesc, projectImg, projectGit, imgAlt }) {
     return (
-        <div className='project-card' >
+        <main className='project-page' >
             <img id='project-pic' src={projectImg} alt={imgAlt} />
-            <div className="project-links">
+            <div className="project-linkout">
                 <Link to={projectLink} target="_blank" rel="noopener noreferrer"><h2>{projectTitle}</h2></Link>
                 <p>{projectDesc}</p>
                 <Link to={projectGit} target="_blank" rel="noopener noreferrer">
@@ -13,6 +13,6 @@ export default function Project({ projectTitle, projectLink, projectDesc, projec
                     </svg>
                 </Link>
             </div>
-        </div>
+        </main>
     )
 }
