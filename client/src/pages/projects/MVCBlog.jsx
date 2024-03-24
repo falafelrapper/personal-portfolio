@@ -1,10 +1,10 @@
 import ProjectPage from "../../components/ProjectPage";
 import { useState, useEffect } from "react";
 
-export default function MadLibs() {
+export default function MVCBlog() {
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const imageUrl = [
-        '/content/portfolio/mad-libs.png'
+        '/content/portfolio/tech-blog.png'
     ];
 
     function preloadFiles(files) {
@@ -30,11 +30,12 @@ export default function MadLibs() {
         <>
             {imagesLoaded ? (
                 <ProjectPage
-                    projectTitle='Mad Libs Generator'
-                    projectDesc='For my final project for the UCLA edX Full Stack Development Boot Camp, me and three others made a simple Mad Libs Generator where you can share stories with other people. It is utilizing the MERN stack, with React, MongoDB Atlas, Ant Design Components, and GraphQL.'
-                    projectLink='https://team-m-s-project-3.onrender.com/'
-                    projectImg='/content/portfolio/mad-libs.png'
-                    projectGit='https://github.com/RCLobster/team-M-s-project-3' />
+                projectTitle='MVC Tech Blog'
+                projectDesc='Similiar to Breaking Bread, it is an MVC styled tech blog. This was made just after and allows you to make posts and comment on each post as well. It uses Javascript, Handlebars.js, OOP, and SQL for the database.'
+                projectLink='https://fast-brook-63532-7edb79d80522.herokuapp.com/'
+                projectImg='/content/portfolio/tech-blog.png'
+                projectGit='https://github.com/falafelrapper/mvc-tech-blog' />
+                
             ) : (
                 <div></div>
             )}

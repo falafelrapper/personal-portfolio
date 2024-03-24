@@ -31,18 +31,12 @@
 }
 
 :root {
-    --kyogre: #194E8A;
-    --deepsea: #4b8eda;
-    --miku: #4adad0;
+    --linkHover: #4adad0;
     --black: #000000;
-    --smoke: #807f7f80;
     --white: #ffffff;
-    --deepsmoke: #807f7fbb;
-    --lugia: #dddddd;
-    --jade: #640377;
-    --text: #ec98e1;
-    --emerald: #19bb98;
     --clear: #00000000;
+    --button: #838383;
+    --buttonHover: #4b4b4b;
 }
 
 html,
@@ -59,15 +53,15 @@ body {
 }
 
 
-a {
+nav a {
     text-decoration: none;
     color: black;
     transition: ease-in-out 0.2s;
     font-weight: 100;
 }
 
-a:hover {
-    color: var(--miku);
+nav a:hover {
+    color: var(--linkHover);
 }
 
 .footer {
@@ -104,7 +98,7 @@ header {
     justify-content: space-around;
     text-align: center;
     margin: 5px auto 0;
-    border: solid 3px;
+    border: solid 2px;
     border-radius: 8px;
     font-size: 1.5rem;
     width: fit-content;
@@ -166,7 +160,7 @@ header {
     animation: fadeIn 1.5s;
 }
 
-.dark-resume{
+.dark-resume {
     display: none;
 }
 
@@ -221,15 +215,17 @@ header {
     position: relative;
     z-index: 2;
     background-color: white;
+    color: black;
+    text-decoration: none;
     overflow: hidden;
     animation: moveUpCard 1.5s;
 }
 
-.project-card h2{
+.project-card h2 {
     margin: .5rem auto;
 }
 
-.project-card p{
+.project-card p {
     margin: .5rem auto;
     font-size: 1rem;
     text-align: center;
@@ -237,10 +233,8 @@ header {
 
 #github-repo {
     color: black;
-    transition: ease-in-out .2s;
-    margin: .5rem 1rem;
-    height: 5vh;
-    width: 5vw;
+    height: 3vh;
+    width: 3vw;
 }
 
 .project-card img {
@@ -255,7 +249,7 @@ header {
     opacity: .4;
 }
 
-.project-links {
+.card-links {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -272,12 +266,104 @@ header {
     aspect-ratio: 16 / 9;
     opacity: 0;
     transition: ease-in-out 0.4s;
+    color: black;
+    text-decoration: none;
 }
 
-.project-card:hover .project-links {
+.project-card:hover .card-links {
     filter: blur(0px);
     opacity: 1;
     z-index: 2;
+}
+
+.project-page {
+    display: flex;
+    width: 50vw;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 1.5s, moveUpProject 1.5s;
+    min-height: 100vh;
+}
+
+.thumbnail {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Geist";
+    border: solid 2px;
+    border-radius: 8px;
+    margin: 5rem 5rem 0;
+    width: 45vw;
+    aspect-ratio: 16 / 9;
+    transition: ease-in-out .3s;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    animation: moveUpCard 1.5s;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+
+.description p {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+
+}
+
+.project-linkout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    border: gray 3px;
+    border-radius: 10px;
+    padding: .5rem;
+    height: 40px;
+    width: 15rem;
+    cursor: pointer;
+    font-family: "Geist";
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--black);
+    transition: ease-in-out .3s;
+}
+
+.project-link:hover {
+    background-color: var(--buttonHover);
+}
+
+.back {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.back a {
+    text-decoration: none;
+    color: black;
+    margin: 10px;
+}
+
+.project-link svg {
+    margin: 0 3px;
+    height: 32px;
+    width: 32px;
 }
 
 .contact-window {
@@ -297,8 +383,6 @@ header {
     border-radius: 8px;
     margin: auto auto;
 }
-
-
 
 .contact-card p,
 .contact-form label,
@@ -364,17 +448,12 @@ header {
 #email:hover,
 #phone:hover,
 #github:hover,
-#github-repo:hover,
 #stackoverflow:hover {
-    color: var(--miku);
+    color: var(--linkHover);
 }
 
 #zach-pic {
     width: 15%;
-}
-
-.error {
-    color: red;
 }
 
 @keyframes fadeIn {
@@ -417,6 +496,16 @@ header {
     }
 }
 
+@keyframes moveUpProject {
+    0% {
+        padding-top: 5vh;
+    }
+
+    100% {
+        padding-top: 0vh;
+    }
+}
+
 @keyframes moveUpAbout {
     0% {
         padding-top: 20vh;
@@ -439,7 +528,7 @@ header {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        background-color: #080808;
+        background-color: black;
         color: white;
     }
 
@@ -458,7 +547,7 @@ header {
         font-size: 1.5rem;
         width: fit-content;
         animation: fadeIn 1s;
-        background-color: #080808;
+        background-color: black;
     }
 
     .navbar a {
@@ -466,26 +555,15 @@ header {
     }
 
     .footer {
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        align-items: center;
-        background: linear-gradient(var(--clear) 10%, #080808 20%);
-        height: 2.5rem;
-        padding-top: 1rem;
-        z-index: 2;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        animation: fadeIn 1s;
+        background: linear-gradient(var(--clear) 10%, var(--black) 20%);
     }
 
-    .light-resume{
+    .light-resume {
         display: none;
         z-index: -1;
     }
 
-    .dark-resume{
+    .dark-resume {
         display: inherit;
     }
 
@@ -494,10 +572,20 @@ header {
     #github,
     #stackoverflow {
         color: white;
-        transition: ease-in-out .2s;
-        margin: 0 1rem;
-        height: 2rem;
-        width: 2rem;
+    }
+
+    .project-card {
+        color: var(--white);
+    }
+
+    .back a {
+        color: var(--white);
+    }
+
+    .project-link {
+        border: gray 3px;
+        color: black;
+        background-color: var(--white);
     }
 }
 
@@ -517,7 +605,7 @@ header {
         position: relative;
     }
 
-    .project-links {
+    .card-links {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -589,7 +677,7 @@ header {
         animation: moveUpCardMobile 1.5s;
     }
 
-    .project-links {
+    .card-links {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -649,7 +737,6 @@ header {
     #email,
     #phone,
     #github,
-    #github-repo,
     #stackoverflow {
         transition: ease-in-out .2s;
         margin: 0 10vw;
@@ -730,5 +817,24 @@ header {
 
     .page-start {
         min-height: 105vh;
+    }
+
+    .project-linkout {
+        flex-direction: column;
+    }
+
+    .project-page {
+        display: flex;
+        width: 90vw;
+        margin: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        animation: fadeIn 1.5s, moveUpProject 1.5s;
+        min-height: 100vh;
+    }
+
+    .thumbnail {
+        width: 100%;
     }
 }

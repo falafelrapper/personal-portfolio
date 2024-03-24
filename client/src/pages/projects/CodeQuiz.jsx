@@ -1,10 +1,10 @@
 import ProjectPage from "../../components/ProjectPage";
 import { useState, useEffect } from "react";
 
-export default function MadLibs() {
+export default function CodeQuiz() {
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const imageUrl = [
-        '/content/portfolio/mad-libs.png'
+        '/content/portfolio/code-quiz.png'
     ];
 
     function preloadFiles(files) {
@@ -30,11 +30,11 @@ export default function MadLibs() {
         <>
             {imagesLoaded ? (
                 <ProjectPage
-                    projectTitle='Mad Libs Generator'
-                    projectDesc='For my final project for the UCLA edX Full Stack Development Boot Camp, me and three others made a simple Mad Libs Generator where you can share stories with other people. It is utilizing the MERN stack, with React, MongoDB Atlas, Ant Design Components, and GraphQL.'
-                    projectLink='https://team-m-s-project-3.onrender.com/'
-                    projectImg='/content/portfolio/mad-libs.png'
-                    projectGit='https://github.com/RCLobster/team-M-s-project-3' />
+                projectTitle='Coding Quiz'
+                projectDesc='One of the first homeworks I worked on during my full stack boot camp, this is a simple coding quiz in which you answer three questions in the quickest time. There also a leaderboard feature once you are complete, and can restart the quiz to try and beat your last time. It is using some simple Javascript, HTML, and CSS.'
+                projectLink='https://falafelrapper.github.io/code-quiz/'
+                projectImg='/content/portfolio/code-quiz.png'
+                projectGit='https://github.com/falafelrapper/code-quiz' />
             ) : (
                 <div></div>
             )}

@@ -1,10 +1,10 @@
 import ProjectPage from "../../components/ProjectPage";
 import { useState, useEffect } from "react";
 
-export default function MadLibs() {
+export default function MovieRecommender() {
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const imageUrl = [
-        '/content/portfolio/mad-libs.png'
+        '/content/portfolio/movie-recommender.png'
     ];
 
     function preloadFiles(files) {
@@ -30,11 +30,11 @@ export default function MadLibs() {
         <>
             {imagesLoaded ? (
                 <ProjectPage
-                    projectTitle='Mad Libs Generator'
-                    projectDesc='For my final project for the UCLA edX Full Stack Development Boot Camp, me and three others made a simple Mad Libs Generator where you can share stories with other people. It is utilizing the MERN stack, with React, MongoDB Atlas, Ant Design Components, and GraphQL.'
-                    projectLink='https://team-m-s-project-3.onrender.com/'
-                    projectImg='/content/portfolio/mad-libs.png'
-                    projectGit='https://github.com/RCLobster/team-M-s-project-3' />
+                    projectTitle='Movie Recommender'
+                    projectDesc="For my first project for the UCLA edX Full Stack Development Boot Camp, me and three others made this TMDB API-based site that allows you to get a recommendation based on genre, and then allows you to pick your favorite from there. It is using jQuery, and just basic CSS and HTML, alongside an API connection with TMDB's database."
+                    projectLink='https://falafelrapper.github.io/movie-recommender/'
+                    projectImg='/content/portfolio/movie-recommender.png'
+                    projectGit='https://github.com/falafelrapper/movie-recommender' />
             ) : (
                 <div></div>
             )}

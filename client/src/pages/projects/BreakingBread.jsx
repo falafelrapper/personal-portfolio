@@ -1,10 +1,10 @@
 import ProjectPage from "../../components/ProjectPage";
 import { useState, useEffect } from "react";
 
-export default function MadLibs() {
+export default function BreakingBread() {
     const [imagesLoaded, setImagesLoaded] = useState(false);
     const imageUrl = [
-        '/content/portfolio/mad-libs.png'
+        '/content/portfolio/breaking-bread.jpg'
     ];
 
     function preloadFiles(files) {
@@ -30,11 +30,11 @@ export default function MadLibs() {
         <>
             {imagesLoaded ? (
                 <ProjectPage
-                    projectTitle='Mad Libs Generator'
-                    projectDesc='For my final project for the UCLA edX Full Stack Development Boot Camp, me and three others made a simple Mad Libs Generator where you can share stories with other people. It is utilizing the MERN stack, with React, MongoDB Atlas, Ant Design Components, and GraphQL.'
-                    projectLink='https://team-m-s-project-3.onrender.com/'
-                    projectImg='/content/portfolio/mad-libs.png'
-                    projectGit='https://github.com/RCLobster/team-M-s-project-3' />
+                projectTitle='Breaking Bread'
+                projectDesc='For my second project for the UCLA edX Full Stack Development Boot Camp, I worked with three others to deliver this MVC styled recipe blog. It uses Javascript, Handlebars.js, OOP, and SQL for the database.'
+                projectLink='https://agile-cove-66310-81bc545fcfa7.herokuapp.com/'
+                projectImg='/content/portfolio/breaking-bread.jpg'
+                projectGit='https://github.com/falafelrapper/breaking-bread' />
             ) : (
                 <div></div>
             )}
