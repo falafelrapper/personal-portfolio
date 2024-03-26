@@ -354,7 +354,7 @@ header {
     -webkit-columns: 2;
     -moz-columns: 2;
     padding-left: 0;
-    text-align: justify;
+    text-align: start;
     list-style-position: inside;
 }
 .tech-used li{
@@ -373,6 +373,11 @@ header {
     text-decoration: none;
     color: black;
     margin: 10px;
+    transition: ease-in-out 0.2s;
+}
+
+.back a:hover{
+    color: var(--linkHover);
 }
 
 .project-link svg {
@@ -668,6 +673,10 @@ header {
     #resume-dl {
         height: 5vh;
         width: 5vw;
+    }
+
+    .back {
+        padding-bottom: 15vh;
     }
 }
 
