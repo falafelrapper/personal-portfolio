@@ -285,6 +285,7 @@ header {
     text-align: center;
     animation: fadeIn 1.5s, moveUpProject 1.5s;
     min-height: 100vh;
+    height: fit-content;
 }
 
 .thumbnail {
@@ -297,7 +298,6 @@ header {
     margin: 5rem 5rem 0;
     width: 45vw;
     aspect-ratio: 16 / 9;
-    transition: ease-in-out .3s;
     position: relative;
     z-index: 2;
     overflow: hidden;
@@ -329,7 +329,7 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    margin: 1rem;
+    margin: 2vh 1rem 6vh 1rem;
     border: gray 3px;
     border-radius: 10px;
     padding: .5rem;
@@ -347,11 +347,26 @@ header {
     background-color: var(--buttonHover);
 }
 
+.tech-used{
+    width: fit-content;
+    margin: auto;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    padding-left: 0;
+    text-align: justify;
+    list-style-position: inside;
+}
+.tech-used li{
+    margin: 0 1em;
+}
+
 .back {
     display: flex;
+    width: fit-content;
     margin: auto;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    animation: moveUpGoBack 1.5s;
 }
 
 .back a {
@@ -526,6 +541,15 @@ header {
     }
 }
 
+@keyframes moveUpGoBack {
+    0%{
+        padding-top: 5vh;
+    }
+    100% {
+        padding-top: 0vh;
+    }
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         background-color: black;
@@ -589,6 +613,15 @@ header {
     }
 }
 
+@media (min-width: 1025px) {
+    .back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 8vh;
+        margin-left: 20vw;
+    }
+}
 
 @media (max-width: 1024px) {
     .project-card {
