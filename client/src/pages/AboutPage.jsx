@@ -36,18 +36,15 @@ export default function AboutPage() {
         <img id='zach-pic' src="/content/about-me.png" alt="Zachary Roy" />
         <h2>About Me</h2>
         <p>
-          I'm a burgeoning full stack web developer currently
-          expanding my horizons through UCLA's edX Full Stack Development Boot Camp. Based in
-          the vibrant city of Los Angeles, CA, I'm deeply immersed in the world of coding, constantly
-          exploring the vast potential of upcoming technologies and their capacity
-          to contribute positively to society. My journey into the realm of technology started with 
-          a simple curiosity about how computers work and what they can achieve. This curiosity 
-          quickly evolved into a passion, leading me to where I am today – on the cusp of 
-          completing an intensive program at UCLA designed to arm me with the skills needed to build 
-          comprehensive, user-friendly, and efficient web applications from scratch.
-          When I'm not elbows-deep in code, I express myself through music. I'm a drummer for bands 
-          such as Meishi Smile and Pacific Palace, where I find a different kind of rhythm and 
-          collaboration that parallels the teamwork and creativity I bring to web development projects.
+        Hi there, I'm a full-stack web developer. Situated in the lively city of Los Angeles, CA, 
+        I'm deeply immersed in the realm of coding, constantly exploring emerging technologies and their 
+        potential to make a positive impact on society. My journey into the world of technology was 
+        sparked by a simple curiosity about computers and their capabilities. This curiosity blossomed 
+        into a passion, propelling me to complete the intensive full stack development bootcamp at UCLA edX, 
+        where I gained the skills to craft comprehensive, user-friendly, and efficient web applications 
+        from scratch. When I'm not engrossed in code, you'll often find me expressing myself through music. 
+        As a drummer for bands like Meishi Smile and Pacific Palace, I find a different kind of rhythm and 
+        collaboration that mirrors the teamwork and creativity I bring to my web development projects.
         </p>
         <h4>My Mission</h4>
         <p>I believe in the power of collaboration to bring innovative ideas to life. Whether
