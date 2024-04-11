@@ -127,9 +127,10 @@ header {
     flex-direction: column;
     text-align: center;
     font-family: "Geist";
-    padding-top: 15vh;
+    margin-top: 15vh;
     height: fit-content;
     animation: fadeIn 1.5s, moveUpAbout 1.5s;
+    position: relative;
 }
 
 .about-me p {
@@ -194,10 +195,29 @@ header {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    animation: fadeIn 1.5s, moveUp 1.5s;
+    animation: moveUp 1.5s;
     justify-content: center;
     padding: 5vh 0 10vh;
 }
+
+@for $i from 2 through 10 {
+    .portfolio-container .project-card:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.1}s;
+    }
+}
+
+// .portfolio-container .project-card:nth-child(2){
+//     animation-delay: .2s;
+// }
+// .portfolio-container .project-card:nth-child(3){
+//     animation-delay: .4s;
+// }
+// .portfolio-container .project-card:nth-child(4){
+//     animation-delay: .6s;
+// }
+// .portfolio-container .project-card:nth-child(5){
+//     animation-delay: .8s;
+// }
 
 .project-card {
     flex: 1 0 30%;
@@ -218,7 +238,8 @@ header {
     color: black;
     text-decoration: none;
     overflow: hidden;
-    animation: moveUpCard 1.5s;
+    animation: fadeIn 1.5s, moveUp 1.5s;
+    animation-fill-mode: backwards;
 }
 
 .project-card h2 {
@@ -508,11 +529,11 @@ header {
 
 @keyframes moveUp {
     0% {
-        padding-top: 10vh;
+        transform: translateY(5rem);
     }
 
     100% {
-        padding-top: 5vh;
+        transform: translateY(0rem);
     }
 }
 
@@ -528,11 +549,11 @@ header {
 
 @keyframes moveUpAbout {
     0% {
-        padding-top: 20vh;
+        margin-top: 20vh;
     }
 
     100% {
-        padding-top: 15vh;
+        margin-top: 15vh;
     }
 }
 
@@ -562,20 +583,10 @@ header {
     }
 
     #resume-dl {
-        height: 4vh;
-        width: 4vw;
         color: white;
     }
 
     .navbar {
-        display: flex;
-        justify-content: space-around;
-        text-align: center;
-        margin: 5px auto 0;
-        border-radius: 8px;
-        font-size: 1.5rem;
-        width: fit-content;
-        animation: fadeIn 1s;
         background-color: black;
     }
 
