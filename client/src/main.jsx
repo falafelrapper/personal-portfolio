@@ -16,6 +16,7 @@ import BreakingBread from './pages/projects/BreakingBread';
 import MovieRecommender from './pages/projects/MovieRecommender';
 import MVCBlog from './pages/projects/MVCBlog';
 import CodeQuiz from './pages/projects/CodeQuiz';
+import SLOStone from './pages/projects/SLOStone';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: 'portfolio',
         element: <PortfolioPage />,
+      },
+      {
+        path: 'portfolio/SLO-stone',
+        element: <SLOStone />,
       },
       {
         path: 'portfolio/madlibs',

@@ -9,7 +9,8 @@ export default function PortfolioPage() {
     '/content/portfolio/tech-blog.png',
     '/content/portfolio/code-quiz.png',
     '/content/portfolio/movie-recommender.png',
-    '/content/portfolio/mad-libs.png'
+    '/content/portfolio/mad-libs.png',
+    '/content/portfolio/SLO-stone.jpg',
   ];
 
   function preloadFiles(files) {
@@ -36,6 +37,11 @@ export default function PortfolioPage() {
     <>
       {imagesLoaded ? (
         <main className="portfolio-container">
+          <Project
+            projectTitle='SLO Stone Properties'
+            projectDesc='Property site designed for SLO Stone Properties LLC'
+            projectLink='/portfolio/SLO-stone'
+            projectImg='/content/portfolio/SLO-stone.jpg' />
           <Project
             projectTitle='Mad Libs Generator'
             projectDesc='A simple Mad Libs Generator where you can share stories with other people'
