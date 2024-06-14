@@ -2,7 +2,6 @@ import { useState, useEffect } from "react"
 
 export default function ResumePage() {
   const [imagesLoaded, setImagesLoaded] = useState(false)
-  const imageUrls = ["/content/Resume-Light.jpg", "/content/Resume-Dark.jpg"]
 
   function preloadFiles(files) {
     const promises = files.map((file) => {
@@ -20,8 +19,10 @@ export default function ResumePage() {
   }
 
   useEffect(() => {
+    const imageUrls = ["/content/Resume-Light.jpg", "/content/Resume-Dark.jpg"]
+
     preloadFiles(imageUrls)
-  }, [imageUrls])
+  }, [])
 
   return (
     <>

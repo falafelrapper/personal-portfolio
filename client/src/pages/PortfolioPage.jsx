@@ -3,14 +3,6 @@ import Project from "../components/Project"
 
 export default function PortfolioPage() {
   const [imagesLoaded, setImagesLoaded] = useState(false)
-  const imageUrls = [
-    "/content/portfolio/breaking-bread.jpg",
-    "/content/portfolio/tech-blog.png",
-    "/content/portfolio/code-quiz.png",
-    "/content/portfolio/movie-recommender.png",
-    "/content/portfolio/mad-libs.png",
-    "/content/portfolio/SLO-stone.jpg",
-  ]
 
   function preloadFiles(files) {
     const promises = files.map((file) => {
@@ -28,8 +20,17 @@ export default function PortfolioPage() {
   }
 
   useEffect(() => {
+    const imageUrls = [
+      "/content/portfolio/breaking-bread.jpg",
+      "/content/portfolio/tech-blog.png",
+      "/content/portfolio/code-quiz.png",
+      "/content/portfolio/movie-recommender.png",
+      "/content/portfolio/mad-libs.png",
+      "/content/portfolio/SLO-stone.jpg",
+    ]
+
     preloadFiles(imageUrls)
-  }, [imageUrls])
+  }, [])
 
   return (
     <>
