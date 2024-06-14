@@ -38,12 +38,15 @@
   --clear: #00000000;
   --button: #838383;
   --buttonHover: #4b4b4b;
+  --transparent: #00000000;
 }
 
 html,
 body {
   overflow-x: hidden;
   width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -51,6 +54,19 @@ body {
   margin: 0;
   font-family: "Geist";
   overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: var(--transparent);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #949494;
+  border-radius: 10px;
+  width: 8px;
+  height: 8px;
 }
 
 nav a {
@@ -172,6 +188,7 @@ header {
 #resume-dl {
   height: 4vh;
   width: 4vw;
+  color: black;
 }
 
 .resume-dl a {
