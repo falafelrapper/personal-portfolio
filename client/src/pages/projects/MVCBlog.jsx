@@ -30,13 +30,13 @@ export default function MVCBlog() {
         <>
             {imagesLoaded ? (
                 <ProjectPage
-                projectTitle='MVC Tech Blog'
-                projectDesc='Similiar to Breaking Bread, it is an MVC styled tech blog. This was made just after my second project and allows you to make posts and comment on each post as well.'
-                projectLink='https://fast-brook-63532-7edb79d80522.herokuapp.com/'
-                projectImg='/content/portfolio/tech-blog.png'
-                projectGit='https://github.com/falafelrapper/mvc-tech-blog' 
-                projectTech={['Handlebars.js', 'RESTful API', 'MySQL', 'OOP', 'Javascript', 'CSS']}/>
-                
+                    projectTitle='MVC Tech Blog'
+                    projectDesc='Similiar to Breaking Bread, it is an MVC styled tech blog. This was made just after my second project and allows you to make posts and comment on each post as well.'
+                    projectLink='https://fast-brook-63532-7edb79d80522.herokuapp.com/'
+                    projectImg='/content/portfolio/tech-blog.png'
+                    projectGit='https://github.com/falafelrapper/mvc-tech-blog'
+                    projectTech={['Handlebars.js', 'RESTful API', 'MySQL', 'OOP', 'Javascript', 'CSS']} />
+
             ) : (
                 <div></div>
             )}

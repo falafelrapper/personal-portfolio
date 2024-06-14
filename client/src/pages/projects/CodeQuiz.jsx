@@ -30,12 +30,12 @@ export default function CodeQuiz() {
         <>
             {imagesLoaded ? (
                 <ProjectPage
-                projectTitle='Coding Quiz'
-                projectDesc='One of the first homeworks I worked on during my full stack boot camp, this is a simple coding quiz in which you answer three questions in the quickest time. There also a leaderboard feature once you are complete, and can restart the quiz to try and beat your last time.'
-                projectLink='https://falafelrapper.github.io/code-quiz/'
-                projectImg='/content/portfolio/code-quiz.png'
-                projectGit='https://github.com/falafelrapper/code-quiz'
-                projectTech={["Javascript", 'HTML', 'CSS']} />
+                    projectTitle='Coding Quiz'
+                    projectDesc='One of the first homeworks I worked on during my full stack boot camp, this is a simple coding quiz in which you answer three questions in the quickest time. There also a leaderboard feature once you are complete, and can restart the quiz to try and beat your last time.'
+                    projectLink='https://falafelrapper.github.io/code-quiz/'
+                    projectImg='/content/portfolio/code-quiz.png'
+                    projectGit='https://github.com/falafelrapper/code-quiz'
+                    projectTech={["Javascript", 'HTML', 'CSS']} />
             ) : (
                 <div></div>
             )}

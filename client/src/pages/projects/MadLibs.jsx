@@ -34,8 +34,8 @@ export default function MadLibs() {
                     projectDesc='For my final project for the UCLA edX Full Stack Development Boot Camp, me and three others made a simple Mad Libs Generator where you can share stories with other people.'
                     projectLink='https://team-m-s-project-3.onrender.com/'
                     projectImg='/content/portfolio/mad-libs.png'
-                    projectGit='https://github.com/RCLobster/team-M-s-project-3' 
-                    projectTech={['Mern Stack', 'React', 'MongoDB Atlas', 'Ant Design Components', 'GraphQL']}/>
+                    projectGit='https://github.com/RCLobster/team-M-s-project-3'
+                    projectTech={['Mern Stack', 'React', 'MongoDB Atlas', 'Ant Design Components', 'GraphQL']} />
             ) : (
                 <div></div>
             )}

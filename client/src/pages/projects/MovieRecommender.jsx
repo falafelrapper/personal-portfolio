@@ -34,8 +34,8 @@ export default function MovieRecommender() {
                     projectDesc="For my first project for the UCLA edX Full Stack Development Boot Camp, me and three others made this TMDB API-based site that allows you to get a recommendation based on genre, and then allows you to pick your favorite from there."
                     projectLink='https://falafelrapper.github.io/movie-recommender/'
                     projectImg='/content/portfolio/movie-recommender.png'
-                    projectGit='https://github.com/falafelrapper/movie-recommender' 
-                    projectTech={['jQuery', 'TMDB API', 'CSS', 'HTML']}/>
+                    projectGit='https://github.com/falafelrapper/movie-recommender'
+                    projectTech={['jQuery', 'TMDB API', 'CSS', 'HTML']} />
             ) : (
                 <div></div>
             )}

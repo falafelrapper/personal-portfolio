@@ -30,12 +30,12 @@ export default function SLOStone() {
         <>
             {imagesLoaded ? (
                 <ProjectPage
-                projectTitle='SLO Stone Properties'
-                projectDesc="One of the first projects I worked on after my graduation from UCLA Extension's Full Stack Development course. We were asked by a client to refactor what was originally a premade GoDaddy template site. Now it utilizes a backend and admin page where they can make edit's to their site without having to handle code themselves."
-                projectLink='https://slostoneproperties.com/'
-                projectImg='/content/portfolio/SLO-stone.jpg'
-                projectGit='https://github.com/RCLobster/slo-stone-properties' 
-                projectTech={['React', 'RESTful API', 'MongoDB', 'Javascript', 'CSS']}/>
+                    projectTitle='SLO Stone Properties'
+                    projectDesc="One of the first projects I worked on after my graduation from UCLA Extension's Full Stack Development course. We were asked by a client to refactor what was originally a premade GoDaddy template site. Now it utilizes a backend and admin page where they can make edit's to their site without having to handle code themselves."
+                    projectLink='https://slostoneproperties.com/'
+                    projectImg='/content/portfolio/SLO-stone.jpg'
+                    projectGit='https://github.com/RCLobster/slo-stone-properties'
+                    projectTech={['React', 'RESTful API', 'MongoDB', 'Javascript', 'CSS']} />
             ) : (
                 <div></div>
             )}

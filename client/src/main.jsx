@@ -1,26 +1,25 @@
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ReactDOM from "react-dom/client"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
-import './App.scss';
+import "./App.scss"
 
-
-import App from './App';
-import ErrorPage from './pages/ErrorPage';
-import HomePage from './pages/HomePage';
-import ResumePage from './pages/ResumePage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import PortfolioPage from './pages/PortfolioPage';
-import MadLibs from './pages/projects/MadLibs';
-import BreakingBread from './pages/projects/BreakingBread';
-import MovieRecommender from './pages/projects/MovieRecommender';
-import MVCBlog from './pages/projects/MVCBlog';
-import CodeQuiz from './pages/projects/CodeQuiz';
-import SLOStone from './pages/projects/SLOStone';
+import App from "./App"
+import ErrorPage from "./pages/ErrorPage"
+import HomePage from "./pages/HomePage"
+import ResumePage from "./pages/ResumePage"
+import AboutPage from "./pages/AboutPage"
+import ContactPage from "./pages/ContactPage"
+import PortfolioPage from "./pages/PortfolioPage"
+import MadLibs from "./pages/projects/MadLibs"
+import BreakingBread from "./pages/projects/BreakingBread"
+import MovieRecommender from "./pages/projects/MovieRecommender"
+import MVCBlog from "./pages/projects/MVCBlog"
+import CodeQuiz from "./pages/projects/CodeQuiz"
+import SLOStone from "./pages/projects/SLOStone"
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
@@ -29,50 +28,50 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: 'about',
+        path: "about",
         element: <AboutPage />,
       },
       {
-        path: 'resume',
+        path: "resume",
         element: <ResumePage />,
       },
       {
-        path: 'contact',
+        path: "contact",
         element: <ContactPage />,
       },
       {
-        path: 'portfolio',
+        path: "portfolio",
         element: <PortfolioPage />,
       },
       {
-        path: 'portfolio/SLO-stone',
+        path: "portfolio/SLO-stone",
         element: <SLOStone />,
       },
       {
-        path: 'portfolio/madlibs',
+        path: "portfolio/madlibs",
         element: <MadLibs />,
       },
       {
-        path: 'portfolio/breaking-bread',
+        path: "portfolio/breaking-bread",
         element: <BreakingBread />,
       },
       {
-        path: 'portfolio/movie-recommender',
+        path: "portfolio/movie-recommender",
         element: <MovieRecommender />,
       },
       {
-        path: 'portfolio/tech-blog',
+        path: "portfolio/tech-blog",
         element: <MVCBlog />,
       },
       {
-        path: 'portfolio/code-quiz',
+        path: "portfolio/code-quiz",
         element: <CodeQuiz />,
       },
     ],
   },
-]);
+])
 
 // Render the RouterProvider component
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <RouterProvider router={router} />
-);
+)
