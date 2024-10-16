@@ -38,7 +38,7 @@ export default function PortfolioPage() {
         <main className="portfolio-container">
           <Project
             projectTitle="Pacific Palace"
-            projectDesc="Property site designed for SLO Stone Properties LLC"
+            projectDesc="A professional site built for Pacific Palace to reach their fans"
             projectLink="/portfolio/pacific-palace"
             projectImg="/content/portfolio/pacific-palace.jpg"
           />

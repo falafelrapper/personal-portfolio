@@ -28,7 +28,7 @@ export default function PacificPalace() {
     <>
       {imagesLoaded ? (
         <ProjectPage
-          projectTitle="SLO Stone Properties"
+          projectTitle="Pacific Palace"
           projectDesc="One of the bands I perform with, Pacific Palace, was looking to finally make a more professional impact in their listener's eyes. That's where I came in and provided them with a modern and stylish website that will be sure to make a great impression on both listeners and promoters."
           projectLink="https://pacific-palace.com/"
           projectImg="/content/portfolio/pacific-palace.jpg"
