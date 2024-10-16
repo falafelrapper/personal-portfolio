@@ -37,6 +37,12 @@ export default function PortfolioPage() {
       {imagesLoaded ? (
         <main className="portfolio-container">
           <Project
+            projectTitle="Pacific Palace"
+            projectDesc="Property site designed for SLO Stone Properties LLC"
+            projectLink="/portfolio/pacific-palace"
+            projectImg="/content/portfolio/pacific-palace.jpg"
+          />
+          <Project
             projectTitle="SLO Stone Properties"
             projectDesc="Property site designed for SLO Stone Properties LLC"
             projectLink="/portfolio/SLO-stone"
