@@ -3,10 +3,11 @@ import { Link } from "react-router-dom"
 import gsap from "gsap"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollSmoother } from "gsap/dist/ScrollSmoother"
 import ProjectPage from "../components/ProjectPage"
 import Project from "../components/Project"
 
-gsap.registerPlugin(useGSAP, ScrollTrigger) // register the hook to avoid React version discrepancies
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother) // register the hook to avoid React version discrepancies
 
 export default function HomePage() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -55,6 +56,12 @@ export default function HomePage() {
 
   useGSAP(
     () => {
+      ScrollSmoother.create({
+        smooth: 0.75,
+        effects: true,
+        smoothTouch: 0.1,
+      })
+
       gsap.set(
         [
           ".about-me img",

@@ -89,7 +89,7 @@ export default function ProjectPage({
           repeat: 1,
           repeatDelay: 0.01,
         },
-        0.5
+        0.35
       )
 
       tl.from(
