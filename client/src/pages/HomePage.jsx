@@ -56,12 +56,6 @@ export default function HomePage() {
 
   useGSAP(
     () => {
-      ScrollSmoother.create({
-        smooth: 0.75,
-        effects: true,
-        smoothTouch: 0.1,
-      })
-
       gsap.set(
         [
           ".about-me img",
