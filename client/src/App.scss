@@ -709,7 +709,6 @@ header {
     border-radius: 8px;
     margin: 4.5rem 4.8% 0;
     max-width: 90%;
-    transition: ease-in-out 0.3s;
     position: relative;
   }
 
@@ -782,7 +781,6 @@ header {
     border-radius: 8px;
     margin: 4.8%;
     max-width: 100%;
-    transition: ease-in-out 0.3s;
     position: relative;
   }
 
@@ -851,11 +849,6 @@ header {
     width: 2.5rem;
   }
 
-  .resume-dl {
-    justify-content: center;
-    padding-bottom: 10vh;
-  }
-
   /* .resume-dl a{
         margin: auto;
         width: 7vw;
@@ -864,21 +857,19 @@ header {
 
   .resume-pic {
     padding-top: 1vh;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: block;
     align-items: center;
     text-align: center;
   }
 
   .resume-pic img {
-    flex-grow: 1 0 50%;
     width: 125%;
+    left: -12.5%;
+    position: relative;
     flex-direction: column;
   }
 
   .contact-window {
-    height: fit-content;
+    // height: fit-content;
     margin-top: 30vh;
     display: flex;
     justify-content: center;
