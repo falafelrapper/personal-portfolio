@@ -1,4 +1,10 @@
+import { useState, useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
+import gsap from "gsap"
+import { useGSAP } from "@gsap/react"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(useGSAP, ScrollTrigger) // register the hook to avoid React version discrepancies
 
 export default function ProjectPage({
   projectTitle,
@@ -6,13 +12,115 @@ export default function ProjectPage({
   projectDesc,
   projectTech,
   projectImg,
+  projectVideo,
   projectGit,
   imgAlt,
+  setModalOpen,
 }) {
+  const container = useRef(null)
+
+  function closeModal() {
+    gsap.to(container.current, {
+      autoAlpha: 0,
+      duration: 0.5,
+      ease: "power3.out",
+    })
+
+    setTimeout(() => {
+      setModalOpen(false)
+    }, 500)
+  }
+
+  useGSAP(
+    () => {
+      gsap.set(container.current, {
+        autoAlpha: 0,
+      })
+
+      let tl = gsap.timeline({
+        // yes, we can add it to an entire timeline!
+        scrollTrigger: {
+          trigger: container.current, // the element that triggers the animation
+          start: "top 400px", // when the top of the trigger hits the top of the viewport
+          toggleActions: "play none none none",
+        },
+      })
+
+      tl.to(
+        container.current,
+        {
+          autoAlpha: 1,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: "power3.out",
+        },
+        0
+      )
+
+      tl.from(
+        ".back",
+        {
+          autoAlpha: 0,
+          y: 50,
+          duration: 0.5,
+          ease: "power3.out",
+          stagger: 0.05,
+        },
+        0
+      )
+
+      tl.from(
+        ".thumbnail",
+        {
+          scaleX: 0,
+          duration: 0.5,
+          ease: "power3.out",
+          stagger: 0.05,
+        },
+        0
+      )
+
+      tl.from(
+        [".thumbnail img", ".thumbnail video"],
+        {
+          autoAlpha: 0,
+          duration: 0.1,
+          ease: "power3.out",
+          repeat: 1,
+          repeatDelay: 0.01,
+        },
+        0.5
+      )
+
+      tl.from(
+        [
+          ".description h2",
+          ".description p",
+          ".description h3",
+          ".tech-used li",
+          ".project-linkout",
+        ],
+        {
+          autoAlpha: 0,
+          y: 50,
+          duration: 0.5,
+          ease: "power3.out",
+          stagger: 0.05,
+        },
+        0
+      )
+    },
+    { scope: container }
+  )
+
   return (
-    <main className="project-page">
+    <div className="project-page" ref={container}>
       <div className="thumbnail">
-        <img src={projectImg} alt={imgAlt} />
+        {projectVideo ? (
+          <video src={projectVideo} controls={false} muted autoPlay loop />
+        ) : (
+          <img src={projectImg} alt={imgAlt} />
+        )}
       </div>
 
       <div className="description">
@@ -64,9 +172,7 @@ export default function ProjectPage({
             </svg>
             Click here to visit the site
           </Link>
-          {projectGit === "" ? (
-            ""
-          ) : (
+          {projectGit && (
             <Link
               className="project-link"
               to={projectGit}
@@ -92,23 +198,23 @@ export default function ProjectPage({
             </Link>
           )}
         </div>
-        <div className="back">
-          <Link to="/portfolio">
-            <svg
-              width="24px"
-              height="24px"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 122.88 108.06"
-            >
-              <path
-                d="M63.94,24.28a14.28,14.28,0,0,0-20.36-20L4.1,44.42a14.27,14.27,0,0,0,0,20l38.69,39.35a14.27,14.27,0,0,0,20.35-20L48.06,68.41l60.66-.29a14.27,14.27,0,1,0-.23-28.54l-59.85.28,15.3-15.58Z"
-                fill="currentColor"
-              />
-            </svg>
-            <p>Go Back</p>
-          </Link>
+      </div>
+      <div className="back" onClick={closeModal}>
+        <div>
+          <svg
+            width="24px"
+            height="24px"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 122.88 108.06"
+          >
+            <path
+              d="M63.94,24.28a14.28,14.28,0,0,0-20.36-20L4.1,44.42a14.27,14.27,0,0,0,0,20l38.69,39.35a14.27,14.27,0,0,0,20.35-20L48.06,68.41l60.66-.29a14.27,14.27,0,1,0-.23-28.54l-59.85.28,15.3-15.58Z"
+              fill="currentColor"
+            />
+          </svg>
+          <p>Go Back</p>
         </div>
       </div>
-    </main>
+    </div>
   )
 }

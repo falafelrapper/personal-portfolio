@@ -14,7 +14,6 @@
 }
 
 body {
-  height: 100vh;
   margin: 0;
 }
 
@@ -24,7 +23,7 @@ a {
   transition: ease-in-out 0.2s;
 }
 
-a:hover{
+a:hover {
   color: aqua;
 }
 

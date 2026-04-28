@@ -46,7 +46,7 @@ export default function AboutPage() {
             As a drummer for bands like Meishi Smile and Pacific Palace, I find a different kind of rhythm and
             collaboration that mirrors the teamwork and creativity I bring to my web development projects.
           </p>
-          <h4>My Mission</h4>
+          {/* <h4>My Mission</h4>
           <p>I believe in the power of collaboration to bring innovative ideas to life. Whether
             it's developing the next groundbreaking application or creating digital solutions that
             make a difference, I'm here to turn visions into reality. With a blend of technical
@@ -54,7 +54,7 @@ export default function AboutPage() {
             challenges and contribute to projects that aim for impact and excellence. If you're
             looking for a dedicated and creative full stack developer with a unique
             perspective, let's get in touch. Together, we can deploy applications that not only
-            meet user needs but also exceed expectations, making a mark on the digital landscape.</p>
+            meet user needs but also exceed expectations, making a mark on the digital landscape.</p> */}
 
           <p>All references are available upon request.</p>
         </main>

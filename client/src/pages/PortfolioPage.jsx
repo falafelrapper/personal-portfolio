@@ -21,6 +21,7 @@ export default function PortfolioPage() {
 
   useEffect(() => {
     const imageUrls = [
+      "/content/portfolio/pacific-palace.jpg",
       "/content/portfolio/breaking-bread.jpg",
       "/content/portfolio/tech-blog.png",
       "/content/portfolio/code-quiz.png",
@@ -35,7 +36,7 @@ export default function PortfolioPage() {
   return (
     <>
       {imagesLoaded ? (
-        <main className="portfolio-container">
+        <div className="portfolio-container">
           <Project
             projectTitle="Pacific Palace"
             projectDesc="A professional site built for Pacific Palace to reach their fans"
@@ -78,7 +79,7 @@ export default function PortfolioPage() {
             projectLink="/portfolio/code-quiz"
             projectImg="/content/portfolio/code-quiz.png"
           />
-        </main>
+        </div>
       ) : (
         <div className="page-start"></div>
       )}
