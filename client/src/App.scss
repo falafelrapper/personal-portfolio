@@ -158,6 +158,8 @@ header {
 .about-me p {
   text-align: justify;
   margin: 5px 15%;
+  max-width: 1000px;
+  line-height: 1.4;
 }
 
 .resume-window {
@@ -476,6 +478,15 @@ header {
   border: solid 3px;
   border-radius: 8px;
   margin: auto auto;
+  padding: 10px 25px;
+
+  a {
+    margin: 10px 0;
+  }
+
+  p {
+    margin: 10px 0;
+  }
 }
 
 .contact-card p,
@@ -483,12 +494,7 @@ header {
 .contact-form input,
 .contact-form textarea,
 .contact-form button {
-  margin: 1vw;
-}
-
-.contact-form textarea {
-  width: 15vw;
-  height: 20vh;
+  // margin: 1vw;
 }
 
 .contact-form {
@@ -500,7 +506,7 @@ header {
   border-radius: 8px;
   margin: 20px auto;
   background-color: white;
-  width: 20vw;
+  // width: 20vw;
 }
 
 .btn {
@@ -859,13 +865,13 @@ header {
     padding-top: 1vh;
     align-items: center;
     text-align: center;
-  }
 
-  .resume-pic img {
-    width: 125%;
-    left: -12.5%;
-    position: relative;
-    flex-direction: column;
+    img {
+      width: 125%;
+      left: -12.5%;
+      position: relative;
+      flex-direction: column;
+    }
   }
 
   .contact-window {
@@ -874,14 +880,6 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-  }
-
-  .contact-card p,
-  .contact-form label,
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form button {
-    margin: 5vw;
   }
 
   .footer {

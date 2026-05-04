@@ -176,16 +176,13 @@ export default function HomePage() {
           <img id="zach-pic" src="/content/about-me.png" alt="Zachary Roy" />
           <h2>About Me</h2>
           <p>
-            Hi there, I'm a full-stack web developer. Situated in the lively
-            city of Los Angeles, CA, I'm deeply immersed in the realm of coding,
-            constantly exploring emerging technologies and their potential to
-            make a positive impact on society. My journey into the world of
-            technology was sparked by a simple curiosity about computers and
-            their capabilities. This curiosity blossomed into a passion,
-            propelling me to complete the intensive full stack development
-            bootcamp at UCLA edX, where I gained the skills to craft
-            comprehensive, user-friendly, and efficient web applications from
-            scratch. When I'm not engrossed in code, you'll often find me
+            Hi there, I'm a full-stack web developer situated in the lively city
+            of Los Angeles, CA. With experiences in both front end and back end,
+            I have a repertoire of skills that allow me to tackle a wide range
+            of projects, such as simpler portfolio building sites with a
+            functional built from the ground up content management system, to
+            full blown web applications that can rival the likes of Canva or
+            Readymag. When I'm not engrossed in code, you'll often find me
             expressing myself through music. As a drummer for bands like Meishi
             Smile and Pacific Palace, I find a different kind of rhythm and
             collaboration that mirrors the teamwork and creativity I bring to my
@@ -396,6 +393,28 @@ export default function HomePage() {
           <div className="contact-card">
             <h2>Contact Me</h2>
             <Link
+              to="https://www.github.com/falafelrapper/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                id="github"
+                width="3vw"
+                height="3vh"
+                viewBox="0 0 1024 1024"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+                  transform="scale(64)"
+                  fill="currentColor"
+                />
+              </svg>
+            </Link>
+            <Link
               to="https://www.linkedin.com/in/zachary-maxwell-roy/"
               target="_blank"
               rel="noopener noreferrer"
@@ -413,7 +432,6 @@ export default function HomePage() {
                 />
               </svg>
             </Link>
-            <p>LinkedIn</p>
             <Link to="mailto:zacharymaxwellroy@gmail.com">
               <svg
                 id="email"
