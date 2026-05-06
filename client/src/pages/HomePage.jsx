@@ -217,6 +217,28 @@ export default function HomePage() {
             }
           />
           <Project
+            projectTitle="3Plus Management"
+            projectDesc="Production company site built for a talent agency in Los Angeles"
+            projectImg="/content/portfolio/3pm.jpg"
+            setModalOpen={() =>
+              handleProjectClick({
+                title: "3Plus Management",
+                desc: "3Plus Management is a talent agency in Los Angeles that represents a host of clients in production. With clients like Vogue, Amazon, HBO, and more, we strived to build a website that suited their needs and allowed for expansion of their digital presence. It also features it's own content management system built from the ground up that allows 3PM to easily add to their roster, whether it's talent updates, new categories, or new clients, we built a system that was unique for them.",
+                link: "https://www.3plusmgmt.com/",
+                img: "/content/portfolio/3pm.jpg",
+                tech: [
+                  "React",
+                  "Node.js",
+                  "AWS",
+                  "SQL",
+                  "Tailwind",
+                  "Typescript",
+                  "SCSS (Sass)",
+                ],
+              })
+            }
+          />
+          <Project
             projectTitle="Pacific Palace"
             projectDesc="A professional site built for Pacific Palace to reach their fans"
             projectImg="/content/portfolio/pacific-palace.jpg"
@@ -226,13 +248,7 @@ export default function HomePage() {
                 desc: "One of the bands I perform with, Pacific Palace, was looking to finally make a more professional impact in their listener's eyes. That's where I came in and provided them with a modern and stylish website that will be sure to make a great impression on both listeners and promoters.",
                 img: "/content/portfolio/pacific-palace.jpg",
                 link: "https://www.pacific-palace.com/",
-                tech: [
-                  "React",
-                  "Vite",
-                  "Tailwind",
-                  "Typescript",
-                  "SCSS (Sass)",
-                ],
+                tech: ["React", "Tailwind", "Typescript", "SCSS (Sass)"],
               })
             }
           />
