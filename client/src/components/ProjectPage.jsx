@@ -14,13 +14,12 @@ export default function ProjectPage({
   projectImg,
   projectVideo,
   projectGit,
+  projectContainer,
   imgAlt,
   setModalOpen,
 }) {
-  const container = useRef(null)
-
   function closeModal() {
-    gsap.to(container.current, {
+    gsap.to(projectContainer.current, {
       autoAlpha: 0,
       duration: 0.5,
       ease: "power3.out",
@@ -33,21 +32,21 @@ export default function ProjectPage({
 
   useGSAP(
     () => {
-      gsap.set(container.current, {
+      gsap.set(projectContainer.current, {
         autoAlpha: 0,
       })
 
       let tl = gsap.timeline({
         // yes, we can add it to an entire timeline!
         scrollTrigger: {
-          trigger: container.current, // the element that triggers the animation
+          trigger: projectContainer.current, // the element that triggers the animation
           start: "top 400px", // when the top of the trigger hits the top of the viewport
           toggleActions: "play none none none",
         },
       })
 
       tl.to(
-        container.current,
+        projectContainer.current,
         {
           autoAlpha: 1,
           duration: 0.5,
@@ -110,11 +109,11 @@ export default function ProjectPage({
         0
       )
     },
-    { scope: container }
+    { scope: projectContainer }
   )
 
   return (
-    <div className="project-page" ref={container}>
+    <div className="project-page" ref={projectContainer}>
       <div className="thumbnail">
         {projectVideo ? (
           <video src={projectVideo} controls={false} muted autoPlay loop />
@@ -170,7 +169,7 @@ export default function ProjectPage({
                 </g>
               </g>
             </svg>
-            Click here to visit the site
+            Visit site
           </Link>
           {projectGit && (
             <Link
@@ -202,17 +201,16 @@ export default function ProjectPage({
       <div className="back" onClick={closeModal}>
         <div>
           <svg
-            width="24px"
-            height="24px"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 122.88 108.06"
+            width="100%"
+            height="100%"
+            viewBox="0 0 640 640"
           >
             <path
-              d="M63.94,24.28a14.28,14.28,0,0,0-20.36-20L4.1,44.42a14.27,14.27,0,0,0,0,20l38.69,39.35a14.27,14.27,0,0,0,20.35-20L48.06,68.41l60.66-.29a14.27,14.27,0,1,0-.23-28.54l-59.85.28,15.3-15.58Z"
+              d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"
               fill="currentColor"
             />
           </svg>
-          <p>Go Back</p>
         </div>
       </div>
     </div>

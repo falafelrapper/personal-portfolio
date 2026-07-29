@@ -13,9 +13,24 @@ export default function HomePage() {
   const [modalOpen, setModalOpen] = useState(false)
   const [project, setProject] = useState(null)
 
-  console.log(project)
-
   const container = useRef()
+  const projectContainer = useRef(null)
+
+  if (modalOpen) {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        gsap.to(projectContainer.current, {
+          autoAlpha: 0,
+          duration: 0.5,
+          ease: "power3.out",
+        })
+
+        setTimeout(() => {
+          setModalOpen(false)
+        }, 500)
+      }
+    })
+  }
 
   function handleProjectClick(projectData) {
     setProject(projectData)
@@ -163,6 +178,7 @@ export default function HomePage() {
         {modalOpen && project && (
           <ProjectPage
             projectTitle={project.title}
+            projectContainer={projectContainer}
             projectDesc={project.desc}
             projectLink={project.link}
             projectImg={project.img}
@@ -204,6 +220,7 @@ export default function HomePage() {
           <Project
             projectTitle="LuckyKat"
             projectDesc="Assists production teams in building high quality treatments in hours instead of weeks"
+            projectLink="https://www.luckykat.app/"
             projectImg="/content/portfolio/luckykat.png"
             setModalOpen={() =>
               handleProjectClick({
@@ -219,6 +236,7 @@ export default function HomePage() {
           <Project
             projectTitle="3Plus Management"
             projectDesc="Production company site built for a talent agency in Los Angeles"
+            projectLink="https://www.3plusmgmt.com/"
             projectImg="/content/portfolio/3pm.jpg"
             setModalOpen={() =>
               handleProjectClick({
@@ -241,6 +259,7 @@ export default function HomePage() {
           <Project
             projectTitle="Pacific Palace"
             projectDesc="A professional site built for Pacific Palace to reach their fans"
+            projectLink="https://www.pacific-palace.com/"
             projectImg="/content/portfolio/pacific-palace.jpg"
             setModalOpen={() =>
               handleProjectClick({
@@ -255,6 +274,7 @@ export default function HomePage() {
           <Project
             projectTitle="SLO Stone Properties"
             projectDesc="Property site designed for SLO Stone Properties LLC"
+            projectLink="https://www.slostoneproperties.com/"
             projectImg="/content/portfolio/SLO-stone.jpg"
             setModalOpen={() =>
               handleProjectClick({
@@ -269,13 +289,13 @@ export default function HomePage() {
           <Project
             projectTitle="Mad Libs Generator"
             projectDesc="A simple Mad Libs Generator where you can share stories with other people"
-            projectLink="/portfolio/madlibs"
+            projectLink="https://team-m-s-project-3.onrender.com/"
             projectImg="/content/portfolio/mad-libs.png"
             setModalOpen={() =>
               handleProjectClick({
                 title: "Mad Libs Generator",
                 desc: "A simple Mad Libs Generator where you can share stories with other people",
-                link: "/portfolio/madlibs",
+                link: "https://team-m-s-project-3.onrender.com/",
                 img: "/content/portfolio/mad-libs.png",
                 tech: [
                   "Mern Stack",
@@ -290,13 +310,13 @@ export default function HomePage() {
           <Project
             projectTitle="Breaking Bread"
             projectDesc="Share recipes with others in this tasty blog"
-            projectLink="/portfolio/breaking-bread"
+            projectLink="https://agile-cove-66310-81bc545fcfa7.herokuapp.com/"
             projectImg="/content/portfolio/breaking-bread.jpg"
             setModalOpen={() =>
               handleProjectClick({
                 title: "Breaking Bread",
                 desc: "Share recipes with others in this tasty blog",
-                link: "/portfolio/breaking-bread",
+                link: "https://agile-cove-66310-81bc545fcfa7.herokuapp.com/",
                 img: "/content/portfolio/breaking-bread.jpg",
                 tech: [
                   "Handlebars.js",
@@ -312,13 +332,13 @@ export default function HomePage() {
           <Project
             projectTitle="Movie Recommender"
             projectDesc="TMDB API-based site that allows you to get a recommendation based on genre, and then allows you to pick your favorite from there"
-            projectLink="/portfolio/movie-recommender"
+            projectLink="https://falafelrapper.github.io/movie-recommender/"
             projectImg="/content/portfolio/movie-recommender.png"
             setModalOpen={() =>
               handleProjectClick({
                 title: "Movie Recommender",
                 desc: "TMDB API-based site that allows you to get a recommendation based on genre, and then allows you to pick your favorite from there",
-                link: "/portfolio/movie-recommender",
+                link: "https://falafelrapper.github.io/movie-recommender/",
                 img: "/content/portfolio/movie-recommender.png",
                 tech: ["jQuery", "TMDB API", "CSS", "HTML"],
               })
