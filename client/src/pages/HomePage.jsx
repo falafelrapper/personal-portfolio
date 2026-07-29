@@ -286,7 +286,7 @@ export default function HomePage() {
               })
             }
           />
-          <Project
+          {/* <Project
             projectTitle="Mad Libs Generator"
             projectDesc="A simple Mad Libs Generator where you can share stories with other people"
             projectLink="https://team-m-s-project-3.onrender.com/"
@@ -306,8 +306,8 @@ export default function HomePage() {
                 ],
               })
             }
-          />
-          <Project
+          /> */}
+          {/* <Project
             projectTitle="Breaking Bread"
             projectDesc="Share recipes with others in this tasty blog"
             projectLink="https://agile-cove-66310-81bc545fcfa7.herokuapp.com/"
@@ -328,7 +328,7 @@ export default function HomePage() {
                 ],
               })
             }
-          />
+          /> */}
           <Project
             projectTitle="Movie Recommender"
             projectDesc="TMDB API-based site that allows you to get a recommendation based on genre, and then allows you to pick your favorite from there"
