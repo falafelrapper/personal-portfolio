@@ -311,6 +311,13 @@ header {
   height: 100vh;
   // height: fit-content;
   overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: var(--transparent);
+  }
 }
 
 .project-page .description {
